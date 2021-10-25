@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #102F45;
+}
+
+.container{
+    margin: 20px auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    color: white;
+    font-size: 50px;
+    margin: 10px auto;
+}
+
+.post{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.utente{
+    display: flex;
+    align-items: center;
+    width: 97%;
+    margin: 20px auto;
+}
+
+.img_utente{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: wheat;
+    margin-right: 20px;
+}
+
+.nome_tempo{
+    font-size: 12px;   
+}
+
+.nome{
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.testo{
+    width: 97%;
+    margin: 10px auto;
+}
+
+.img{
+    width: 97%;
+    margin: auto;
+}
+
+img{
+    width: 100%;
+}
+
+.like{
+    width: 97%;
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+}
+
+a, .piace{
+    color: #404040;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.numero {
+    color: black;
+}
