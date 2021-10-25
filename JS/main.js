@@ -1,4 +1,4 @@
-
+//Array di oggetti//Legge l'array di oggetti e li stampa in DOM
 const post = [
     {
         id: 1,
@@ -13,7 +13,7 @@ const post = [
 
         numeroLike: 80,
 
-        dataCreazione: "2 mesi fa"
+        dataCreazione: "21/01/2021"
     },
 
     {
@@ -29,7 +29,7 @@ const post = [
 
         numeroLike: 180,
 
-        dataCreazione: "3 mesi fa"
+        dataCreazione: "5/04/2021"
     },
 
     {
@@ -45,11 +45,11 @@ const post = [
 
         numeroLike: 90,
 
-        dataCreazione: "4 mesi fa"
+        dataCreazione: "30/12/2021"
     },
 ]
 
-
+//Legge l'array di oggetti e li stampa in DOM
 for (i = 0; i < post.length; i++) {
 
     const socialPost = post[i]
@@ -89,33 +89,46 @@ for (i = 0; i < post.length; i++) {
                 </p>
             </div>
     `
-
+    //Seleziona il container dove stampare gli array
     const container = document.querySelector(".container")
 
+    //Stampa in DOM
     container.innerHTML += elemento
 
 }
 
+//Seleziona i bottoni dei likes
 const likeBottoni = document.getElementsByClassName("like_bottone");
 
+//Legge la costante dei bottoni
 for (i = 0; i < likeBottoni.length; i++) {
 
+    //Assegnia una costante per ogni bottone
     const likeBottone = likeBottoni[i];
 
+    //Creamo un evento quando si clicca sul bottone
     likeBottone.addEventListener(`click`, premereLike)
 }
 
+//Funzione che serve ad assegnare la classe like_attivo quando si clicca ed incrementa i like di 1
 function premereLike() {
+    //Verifica se il bottone cliccato ha gia la classe like_attivo
     if (this.classList.contains("like_attivo")) {
+
         return;
     }
+
+    //Aggiunge la classe like_attivo
     this.classList.add("like_attivo");
 
+    //Seleziona l'id del posto e lo assegna ad una costante
     const postId = this.getAttribute("data_post");
 
     /* console.log(postId); */
 
+    //Seleziona il numero dei like e lo assegna ad una costante
     const numeroLike = document.getElementById("numero_" + postId)
 
+    //Incrementa di 1 e stampa i like del post
     numeroLike.innerHTML = Number(numeroLike.innerHTML) + 1
 }
