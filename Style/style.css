@@ -84,6 +84,11 @@ a, .piace{
     font-weight: 600;
 }
 
-.numero {
+#numero {
     color: black;
+}
+
+
+.like_attivo{
+    color: blue;
 }
